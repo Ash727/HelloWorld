@@ -91,4 +91,5 @@ using (var JReader = new JsonTextReader(reader))
 
 }
 
+Console.WriteLine($"{obj.Name} is your name!");
 //using (var jsonReader = new JSONTextReader()
