@@ -91,4 +91,11 @@ using (var JReader = new JsonTextReader(reader))
 
 }
 
+JsonSerializer serializer1 = new JsonSerializer();
+using (var streamWriter = new StreamWriter("file.json"))
+using (var jsonWriter = new JsonTextWriter(streamWriter))
+{
+    serializer1.Serialize(jsonWriter, obj);
+    
+}
 Console.WriteLine($"{obj.Name} is your name!");
